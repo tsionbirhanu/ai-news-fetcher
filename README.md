@@ -83,7 +83,7 @@ python main.py fetch --category tech
 
 > **macOS / Linux:** use `source venv/bin/activate` and `cp .env.example .env`.
 
-Get a **free** Gemini key at <https://aistudio.google.com/apikey>. No key? The
+Get a Gemini key at <https://aistudio.google.com/apikey>. No key? The
 app still runs — it uses the offline summarizer automatically.
 
 ---
