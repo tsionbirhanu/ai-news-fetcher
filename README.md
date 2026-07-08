@@ -168,23 +168,6 @@ remove sources, no code changes needed.
 
 ---
 
-## 🧠 Patterns worth studying
-
-- **Structured output** (`summarizer.py`) — the response is constrained to a JSON
-  schema so the code can trust its shape instead of parsing free-form text. The
-  single most useful pattern in AI automation. (Note: Gemini and Claude each want
-  a slightly different schema dialect — see `_GEMINI_SCHEMA`.)
-- **Graceful degradation** — `summarize_and_tag()` catches any provider error and
-  falls back to a real offline summary. Unattended scripts must survive failures.
-- **Dedup via constraints** (`db.py`) — a `UNIQUE(link)` column does the work; we
-  just catch the integrity error. Simpler and race-free.
-- **Separation of concerns** — fetch / summarize / store are independent layers;
-  the scheduler is a thin wrapper on top.
-- **Rate-limit-aware batching** (`summarizer.py`) — parallel for Claude,
-  sequential-with-retry for Gemini's free tier.
-
----
-
 ## 🩹 Troubleshooting
 
 | Symptom                                             | Fix                                                        |
