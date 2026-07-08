@@ -1,0 +1,17 @@
+{
+  "world": {
+    "BBC World": "http://feeds.bbci.co.uk/news/world/rss.xml",
+    "The Guardian World": "https://www.theguardian.com/world/rss"
+  },
+  "tech": {
+    "TechCrunch": "https://techcrunch.com/feed/",
+    "Ars Technica": "https://feeds.arstechnica.com/arstechnica/index"
+  },
+  "business": {
+    "CNBC Business": "https://www.cnbc.com/id/10001147/device/rss/rss.html",
+    "The Guardian Business": "https://www.theguardian.com/uk/business/rss"
+  },
+  "science": {
+    "NASA Breaking News": "https://www.nasa.gov/rss/dyn/breaking_news.rss"
+  }
+}

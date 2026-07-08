@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+venv/
+.venv/
+.env
+news.db
+news_digest_*.md

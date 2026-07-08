@@ -1,0 +1,11 @@
+# Core
+feedparser==6.0.11       # RSS/Atom parsing
+python-dotenv>=1.0.1     # loads .env into the environment
+
+# LLM providers (pick one via its API key; both optional)
+google-genai>=1.0.0      # Google Gemini — free tier
+anthropic>=0.69.0        # Anthropic Claude
+
+# Offline fallback summarizer (used when no LLM key is set)
+sumy==0.11.0             # extractive LSA summarization
+nltk==3.9.1              # tokenizer data sumy depends on
