@@ -12,7 +12,7 @@ surviving failures unattended, and running on a timer.
 
 | You provide…                | It uses…                                  |
 | --------------------------- | ----------------------------------------- |
-| A Google **Gemini** key     | Gemini 2.5 Flash (**free tier**) — default |
+| A Google **Gemini** key     | Gemini 2.5 Flash — default |
 | No key at all               | An **offline** LSA summarizer (never fails) |
 
 The provider is picked automatically from whichever key is present.
