@@ -13,7 +13,6 @@ surviving failures unattended, and running on a timer.
 | You provide…                | It uses…                                  |
 | --------------------------- | ----------------------------------------- |
 | A Google **Gemini** key     | Gemini 2.5 Flash (**free tier**) — default |
-| An Anthropic **Claude** key | Claude                                    |
 | No key at all               | An **offline** LSA summarizer (never fails) |
 
 The provider is picked automatically from whichever key is present.
@@ -87,9 +86,6 @@ python main.py fetch --category tech
 Get a **free** Gemini key at <https://aistudio.google.com/apikey>. No key? The
 app still runs — it uses the offline summarizer automatically.
 
-> ⚠️ Put real keys **only in `.env`** — never in `.env.example` (that file is a
-> shareable template, and `.env` is the one the app actually reads).
-
 ---
 
 ## 🕹️ Commands
@@ -154,8 +150,7 @@ Once set, `python main.py run` sends the digest automatically each day at
 | ------------------------ | ------------------ | ---------------------------------------------- |
 | `LLM_PROVIDER`           | `auto`             | `auto` \| `gemini` \| `claude` \| `offline`    |
 | `GEMINI_API_KEY`         | —                  | Google Gemini key (free tier)                  |
-| `GEMINI_MODEL`           | `gemini-2.5-flash` | Gemini model id                                |
-| `ANTHROPIC_API_KEY`      | —                  | Anthropic Claude key                           |
+| `GEMINI_MODEL`           | `gemini-2.5-flash` | Gemini model id                              |
 | `CLAUDE_MODEL`           | `claude-opus-4-8`  | Claude model id                                |
 | `ARTICLES_PER_FEED`      | `5`                | How many items to pull per feed                |
 | `MAX_WORKERS`            | `4`                | Parallel requests (Claude only; see note)      |
@@ -194,7 +189,6 @@ remove sources, no code changes needed.
 
 | Symptom                                             | Fix                                                        |
 | --------------------------------------------------- | ---------------------------------------------------------- |
-| `Telegram is not configured`                        | Your values are in `.env.example`, not `.env`. Put them in `.env`. |
 | `The module 'env' could not be loaded`              | You typed `env\Scripts` — it's `venv\Scripts` (with the `v`). |
 | `429 RESOURCE_EXHAUSTED` from Gemini                | Free-tier limit. It auto-retries; lower `ARTICLES_PER_FEED`. |
 | A feed returns 0 articles                           | That feed may be down (the NASA/science feed sometimes is). Use another category. |
